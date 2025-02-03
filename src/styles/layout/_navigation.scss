@@ -1,0 +1,247 @@
+// .main-nav {
+//     background: var(--primary-color);
+//     padding: 20px 0;
+//     position: sticky;
+//     top: 0;
+//     z-index: 1000;
+
+// .logo{
+//     font-size: 16px;
+//     font-weight: 700;
+//     color: var(--text-light);
+//     font-weight: 700;
+//     text-decoration: none;
+// }
+
+// &__content {
+
+//     .container {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       position: relative;
+//       grid-template-columns: 1fr 1fr;
+//       gap: 50px; 
+//     }
+  
+//     .nav-menu {
+//       display: flex;
+//       gap: 40px;
+//       list-style: none;
+//       margin: 0;
+//       padding: 0;
+//     }
+  
+//       .nav-link {
+//         color: var(--text-light);
+//         text-decoration: none;
+//         font-size: 14px;
+//         text-transform: uppercase;
+//         letter-spacing: 0.1em;
+//         transition: opacity 0.3s;
+  
+//         &:hover {
+//           opacity: 0.8;
+//         }
+//       }
+//     }
+// }
+  
+// @media (min-width: 768px) and (max-width: 1199px) {
+//     .logo{
+//         font-size: 20px;
+//     }
+// }
+
+// @media (min-width: 1200px) {
+
+//     .logo{
+//         font-size: 24px;
+//         line-height: 26px;
+//     }
+//     .main-nav {
+//         padding: 30px 0;
+
+//     }
+//         .container {
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//           position: relative;
+//           grid-template-columns: 1fr 1fr;
+//           gap: 50px; 
+//         }
+      
+//         .nav-menu {
+//           display: flex;
+//           gap: 40px;
+//           list-style: none;
+//           margin: 0;
+//           padding: 0;
+//         }
+      
+//           .nav-link {
+//             color: var(--text-light);
+//             text-decoration: none;
+//             font-size: 14px;
+//             text-transform: uppercase;
+//             letter-spacing: 0.1em;
+//             transition: opacity 0.3s;
+      
+//             &:hover {
+//               opacity: 0.8;
+//             }
+//           }
+      
+
+// }
+
+
+.main-nav {
+  background: var(--primary-color);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav .logo {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.main-nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* --- Мобильная версия --- */
+@media (max-width: 767px) {
+  .main-nav__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    padding: 20px 0;
+    border-top: 1px solid var(--text-light);
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--text-light);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  #burger-toggle {
+    display: none;
+  }
+
+  #burger-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+}
+
+/* --- Планшетная версия --- */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main-nav {
+    padding: 25px 0;
+  }
+
+  .main-nav .logo {
+    font-size: 20px;
+  }
+
+  .main-nav__content {
+    gap: 40px;
+  }
+
+  .nav-menu {
+    gap: 30px;
+  }
+
+
+}
+
+/* --- Компьютерная версия --- */
+@media (min-width: 1200px) {
+  .main-nav {
+    padding: 30px 0;
+  }
+
+  .main-nav .logo {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .main-nav__content {
+    gap: 50px;
+  }
+
+  .nav-menu {
+    gap: 40px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}

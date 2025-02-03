@@ -1,0 +1,132 @@
+
+
+.destinations {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .block {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .destinations-first {
+    background: url('../imagesSvg/house-par.jpg') center/cover no-repeat;
+  }
+  
+  .destinations-second {
+    background: url('../imagesSvg/moniment.jpg') center/cover no-repeat;
+  }
+  
+  .dest-content {
+    background: rgba(35, 35, 35, 0.9);
+    color: var(--text-lights);
+    padding: 20px;
+    width: 90%;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  
+  .dest-head {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    color: var(--text-lights);
+    margin-bottom: 15px;
+  }
+  
+  .dest-main {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1.5px;
+    color: var(--text-lights);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .dest-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--text-lights);
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+
+  @media (min-width: 768px) {
+    .block {
+      height: 70vh;
+    }
+  
+    .dest-content {
+      padding: 30px;
+      width: 80%;
+    }
+  
+  
+    .dest-head {
+      font-size: 19px;
+      line-height: 25px;
+    }
+  
+    .dest-main {
+      font-size: 19px;
+      line-height: 25px;
+    }
+  
+    .dest-text {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .block {
+      height: 50vh;
+    }
+  
+    .dest-content {
+      padding: 50px 30px;
+      max-width: 543px;
+    }
+  
+    .content-left {
+      margin-left: 328px;
+    }
+  
+    .content-right {
+      margin-right: 328px;
+    }
+  
+    .dest-button {
+      padding: 21px 64px;
+    }
+  
+    .dest-head {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 23px;
+    }
+  
+    .dest-main {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 13px;
+    }
+  
+    .dest-text {
+      font-size: 16px;
+      line-height: 26px;
+      margin-bottom: 46px;
+    }
+  }
